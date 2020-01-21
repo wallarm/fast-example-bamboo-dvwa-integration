@@ -26,17 +26,17 @@ build:
   tasks:
     - script:
         scripts:
-          - docker-compose build
+          - docker-compose build -e bamboo_SECRET_WALLARM_API_TOKEN
 
 tests:
   key: TST
   tasks:
     - script:
-        - docker-compose up -d dvwa fast selenium
+        - docker-compose up -d dvwa fast selenium -e bamboo_SECRET_WALLARM_API_TOKEN
     - script:
         - docker-compose run --service-ports test
     - script:
-        - docker-compose run -e CI_MODE=testing -e TEST_RUN_URI=http://dvwa:80 fast
+        - docker-compose run -e CI_MODE=testing -e TEST_RUN_URI=http://dvwa:80 fast -e bamboo_SECRET_WALLARM_API_TOKEN
 
 cleanup:
   key: CLN
