@@ -1,9 +1,9 @@
 ---
 version: 2
-variables:
-  SECRET_WALLARM_API_TOKEN: BAMSCRT@0@0@BD+8NIfWD4AtzHDwm3A5TF9YQOacU1npnP/2sw7MdoR5JIuBtMbsvvrJS1fI8AIkBZ2tFRKfSYiQbN0hrf9APV8JUDDTKu5CwGlZxfseou0=
 
 plan:
+  variables:
+    SECRET_WALLARM_API_TOKEN: BAMSCRT@0@0@BD+8NIfWD4AtzHDwm3A5TF9YQOacU1npnP/2sw7MdoR5JIuBtMbsvvrJS1fI8AIkBZ2tFRKfSYiQbN0hrf9APV8JUDDTKu5CwGlZxfseou0=
   project-key: FAST
   key: FAST
   name: Demo FAST testing plan
