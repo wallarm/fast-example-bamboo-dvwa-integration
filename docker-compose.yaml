@@ -12,7 +12,7 @@ services:
     image: wallarm/fast
     restart: on-failure
     environment:
-      WALLARM_API_TOKEN: ${WALLARM_API_TOKEN}
+      WALLARM_API_TOKEN: ${bamboo_WALLARM_API_TOKEN}
       CI_MODE: recording
       ALLOWED_HOSTS: dvwa
     networks:
