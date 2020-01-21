@@ -1,0 +1,40 @@
+---
+version: '3'
+services:
+  dvwa:
+    image: wallarm/fast-example-dvwa-base
+    networks:
+      main:
+        aliases:
+          - dvwa
+
+  fast:
+    image: wallarm/fast
+    restart: on-failure
+    environment:
+      WALLARM_API_TOKEN: ${WALLARM_API_TOKEN}
+      CI_MODE: recording
+      ALLOWED_HOSTS: dvwa
+    networks:
+      main:
+        aliases:
+          - fast
+
+  selenium:
+    image: selenium/standalone-firefox:latest
+    logging:
+      driver: none
+    environment:
+      http_proxy: http://fast:8080
+    networks:
+      main:
+        aliases:
+          - selenium
+
+  test:
+    image: wallarm/fast-example-dvwa-tests
+    networks:
+      main:
+
+networks:
+  main:
