@@ -1,2 +1,3 @@
-#!/bin/bash
-env | grep ^bamboo_ > my_env_file.env
+#!/bin/sh
+touch env_file.env
+env | grep ^bamboo_ > env_file.env
