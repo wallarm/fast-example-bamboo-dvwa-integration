@@ -12,7 +12,7 @@ services:
     image: wallarm/fast
     restart: on-failure
     environment:
-      WALLARM_API_TOKEN: ${bamboo_secret_token}
+      WALLARM_API_TOKEN: ${secret_token}
       TEST_RUN_POLICY_ID: 104
       CI_MODE: recording
       ALLOWED_HOSTS: dvwa
