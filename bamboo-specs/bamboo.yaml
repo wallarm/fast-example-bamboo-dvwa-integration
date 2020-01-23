@@ -1,12 +1,12 @@
 ---
 version: 2
-variables:
-  secret_token: BAMSCRT@0@0@BD+8NIfWD4AtzHDwm3A5TF9YQOacU1npnP/2sw7MdoR5JIuBtMbsvvrJS1fI8AIkBZ2tFRKfSYiQbN0hrf9APV8JUDDTKu5CwGlZxfseou0=
 
 plan:
   project-key: FAST
   key: FAST
   name: Demo FAST testing plan
+  variables:
+    secret_token: BAMSCRT@0@0@BD+8NIfWD4AtzHDwm3A5TF9YQOacU1npnP/2sw7MdoR5JIuBtMbsvvrJS1fI8AIkBZ2tFRKfSYiQbN0hrf9APV8JUDDTKu5CwGlZxfseou0=
 
 stages:
   - building:
