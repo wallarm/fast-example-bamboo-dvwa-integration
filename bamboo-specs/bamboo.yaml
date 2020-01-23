@@ -27,9 +27,7 @@ build:
     - script:
         interpreter: /bin/sh
         scripts:
-          - ./build.sh
-    # - script:
-    #     - docker-compose build
+          - docker-compose build
 
 tests:
   key: TST

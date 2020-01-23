@@ -69,7 +69,7 @@ public class PlanSpec {
             .linkedRepositories("fast-example-azure-dvwa-integration")
 
             .triggers(new RepositoryPollingTrigger())
-            .variables(new Variable("SECRET_WALLARM_API_TOKEN",
+            .variables(new Variable("secret_token",
                     "BAMSCRT@0@0@BD+8NIfWD4AtzHDwm3A5TF9YQOacU1npnP/2sw7MdoR5JIuBtMbsvvrJS1fI8AIkBZ2tFRKfSYiQbN0hrf9APV8JUDDTKu5CwGlZxfseou0="))
             .planBranchManagement(new PlanBranchManagement()
                     .createForVcsBranch()
