@@ -27,7 +27,7 @@ build:
     - script:
         scripts:
           - env
-          - docker-compose build -e WALLARM_API_TOKEN=$secret_token
+          - docker-compose build -e WALLARM_API_TOKEN=$bamboo_secret_token
 
 tests:
   key: TST
