@@ -11,8 +11,6 @@ services:
   fast:
     image: wallarm/fast
     restart: on-failure
-    env_file:
-      - env_file.env
     environment:
       WALLARM_API_TOKEN: ${bamboo_secret_token}
       TEST_RUN_POLICY_ID: 104
