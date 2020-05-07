@@ -22,7 +22,7 @@ stages:
 build:
   key: BLD
   variables:
-    secret_token: BAMSCRT@0@0@C7rsIm35KmrpZdGnfYTt50PZSa4GpgPdFpr2WAEj4sQ58NihLbP/F8o8K2na9tb/5ngou2tt6KUe+wuQMyPg8IRWw4khzbe4Z5IY7VTtycW/wjmszLfAlGl5Y3ck3Nih5uC6s1VZfXD9nCRV1Sx/dpumIR9sPJep3jrzPxJBz5o=
+    secret_token: BAMSCRT@0@0@BD+8NIfWD4AtzHDwm3A5TF9YQOacU1npnP/2sw7MdoR5JIuBtMbsvvrJS1fI8AIkBZ2tFRKfSYiQbN0hrf9APV8JUDDTKu5CwGlZxfseou0=
   tasks:
     - script:
         interpreter: /bin/sh
