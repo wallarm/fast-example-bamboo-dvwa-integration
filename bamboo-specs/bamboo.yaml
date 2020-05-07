@@ -32,7 +32,8 @@ build:
 tests:
   key: TST
   tasks:
-    interpreter: /bin/sh
+    - script:
+      interpreter: /bin/sh
       scripts:
         - docker-compose up -d dvwa fast selenium
         - docker-compose run --service-ports test
