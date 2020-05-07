@@ -33,7 +33,7 @@ tests:
   key: TST
   tasks:
     interpreter: /bin/sh
-      script:
+      scripts:
         - docker-compose up -d dvwa fast selenium
         - docker-compose run --service-ports test
         - docker-compose run -e CI_MODE=testing -e TEST_RUN_URI=http://dvwa:80 fast
