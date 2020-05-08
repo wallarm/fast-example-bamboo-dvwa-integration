@@ -1,0 +1,44 @@
+---
+version: 2
+
+plan:
+  project-key: FAST
+  key: FAST
+  name: Demo FAST testing plan
+
+stages:
+  - building:
+      - build
+  - testing:
+      manual: false
+      final: false
+      jobs:
+        - tests
+  - cleaning:
+      final: true
+      jobs:
+        - cleanup
+
+build:
+  key: BLD
+  tasks:
+    - script:
+        interpreter: /bin/sh
+        scripts:
+          - docker-compose build
+
+tests:
+  key: TST
+  tasks:
+    - script:
+        interpreter: /bin/sh
+        scripts:
+          - docker-compose up -d dvwa fast selenium
+          - docker-compose run --service-ports test
+          - docker-compose run -e CI_MODE=testing -e TEST_RUN_URI=http://dvwa:80 fast
+
+cleanup:
+  key: CLN
+  tasks:
+    - script:
+        - docker-compose down
