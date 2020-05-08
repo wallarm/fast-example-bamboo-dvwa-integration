@@ -1,14 +1,16 @@
-# README
+# Example of running FAST tests for DVWA in Bamboo  
 
-This is an example of Wallarm FAST running security tests in the Bamboo pipeline. The target application is a DVWA.
+This is an example of Wallarm FAST running security tests in the Bamboo 7.0.3 pipeline. The target application is DVWA.
 
-## How to reproduce example
+## Quick start with the example
 
-1. Create your FAST node and get `WALLARM_API_TOKEN` here https://us1.my.wallarm.com/nodes
-2. Fork this repository
-3. Add project into Bamboo (first build will fail without `WALLARM_API_TOKEN`)
-4. Add env-variable `WALLARM_API_TOKEN` in the plan configuration
-5. Rerun build. It will find vulnerabilities
+1. Fork this repository.
+2. Create the FAST node and copy a token value by the [link](https://us1.my.wallarm.com/testing/nodes).
+3. Add a copied token as the `WALLARM_API_TOKEN` global variable in Bamboo.
+4. Create a plan with the name **FAST** in Bamboo.
+5. Link forked repository to Bamboo enabling the **Allow Bamboo to scan this repository for YAML and Java Specs** option.
+6. Add webhook URL specified in the **Linked repository** > **Bamboo Specs** section to the forked repository.
+7. Proceed to the **Specs status** tab and click **Scan** to check Bamboo configuration files and run the plan.
 
 ## Useful links
 
